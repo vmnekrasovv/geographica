@@ -12,8 +12,8 @@
 
 	--index: calc(1vw + 1vh);
 
-	--color-first: #222;
-	--color-second: #a9ff00;
+	--color-first: #242424;
+	--color-second: #DBB454;
 
 } 
 
@@ -22,9 +22,10 @@ html, body {
 	height: 100%;
 	position: relative;
 	background: var(--color-first);
-	color: var(--color-second);
-	font-size: 18px;
+	color: #111;
+	font-size: 16px;
 	font-family: 'Raleway';
+	letter-spacing: .4px;
 
 	@media (min-width: 1921px) {
 		font-size: var(--index);
@@ -42,7 +43,7 @@ body.lock {
 
 .container {
 	width: 100%;
-	max-width: calc( 1200px + (var(--index) * 2) );
+	max-width: calc( 1260px + (var(--index) * 2) );
 	padding: 0 var(--index);
 	margin: 0 auto;
 
