@@ -252,8 +252,11 @@
 			height: 600px;
 		}
 
-		@media (min-width: 1050px) and (max-width: 1250px) {
-			width: 50%;
+		@media (min-width: 500px) and (max-width: 1250px) {
+			width: 100%;
+		    padding: 50px 0;
+		    height: auto;
+		    bottom: -265px;
 		}
 
 		&-box {
@@ -264,8 +267,13 @@
 			background: #fff;
 			z-index: 1;
 
-			@media (max-width: 500px) {
+			@media (max-width: 576px) {
 				padding: 25px;
+			}
+
+			@media (min-width: 577px) and (max-width: 1250px) {
+				width: 480px;
+				margin: 0 auto;
 			}
 		}
 
