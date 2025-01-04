@@ -13,8 +13,8 @@
 	--index: calc(1vw + 1vh);
 
 	--color-first: #242424;
-	--color-second: #FFCD50;
-	--color-second-active: #FFC531; 
+	--color-second: #F0C14C;
+	--color-second-active: #FFC331; 
 
 } 
 
@@ -22,7 +22,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background: var(--color-first);
+	background: #fff;
 	color: #111;
 	font-size: 16px;
 	font-family: 'Raleway';

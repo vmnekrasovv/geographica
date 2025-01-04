@@ -40,8 +40,9 @@
 				gap: 50px;
 				left: 0;
 			}
-		}
-	}
+		} // navbar-dropdown
+
+	} // navbar
 
 	.logo {
 
@@ -62,7 +63,7 @@
 		@media (min-width: 1921px) {
 			font-size: calc(var(--index) * 2);
 		}
-	}
+	} // logo
 
 	&-menu {
 		display: flex;
@@ -106,7 +107,7 @@
 				font-size: calc(var(--index) * 1.2);
 			}
 		}
-	} // menu
+	} // header-menu
 
 	.toolbar {
 		display: flex;
@@ -121,7 +122,7 @@
 			display: flex;
 			gap: 15px;
 		}
-	}
+	} // toolbar
 
 	.search, .message {
 		width: 40px;
@@ -218,6 +219,7 @@
 	} // header-content
 
 	&-form {
+
 		width: 480px;
 		height: 560px;
 		position: absolute;
@@ -234,7 +236,7 @@
 			&::before {
 				display: block;
 				content: '';
-				width: calc(100vw - (var(--index) * 2));
+				width: 100%;
 				height: 100%;
 				position: absolute;
 				top: 0;
@@ -244,6 +246,11 @@
 				background-image: url('../images/dest/help_choosing.jpg');
 				background-size: cover;
 				background-repeat: no-repeat;
+				opacity: .2;
+
+				@media (max-width: 768px) {
+					display: none;
+				}
 			}
 		}
 
@@ -257,6 +264,16 @@
 		    padding: 50px 0;
 		    height: auto;
 		    bottom: -265px;
+		}
+
+		@media (max-width: 768px) {
+			padding: 40px 0;
+			bottom: -350px;
+		}
+
+		@media (max-width: 576px) {
+			padding: 20px 0 40px;
+			bottom: -330px;
 		}
 
 		&-box {
@@ -275,7 +292,7 @@
 				width: 480px;
 				margin: 0 auto;
 			}
-		}
+		} // header-form-box
 
 		&__title {
 			font-size: 24px;
@@ -299,53 +316,124 @@
 			color: rgba(0,0,0,.7);
 		}
 
-		.help-choosing {
+	} // header-form
 
-			input {
-				height: 60px;
-				display: flex;
-				align-items: center;
-			}
+	.help-choosing {
 
-			textarea {
-				height: 80px;
-				resize: none;
-			}
+		input {
+			height: 60px;
+			display: flex;
+			align-items: center;
+		}
 
-			input,
-			textarea {
-				width: 100%;
-				padding: 20px;
-				font-size: 16px;
-				font-family: 'Raleway';
-				border: 1px solid #e2e2e2;
-				margin-bottom: 13px;
+		textarea {
+			height: 80px;
+			resize: none;
+		}
 
-				&::placeholder {
-					color: rgba(0,0,0,.5);
-				}
-			}
+		input,
+		textarea {
+			width: 100%;
+			padding: 20px;
+			font-size: 16px;
+			font-family: 'Raleway';
+			border: 1px solid #e2e2e2;
+			margin-bottom: 13px;
 
-			button {
-				width: 100%;
-				margin-bottom: 16px;
-			}
-
-			&__agreement {
-				padding-right: 40px;
-				font-size: 14px;
+			&::placeholder {
 				color: rgba(0,0,0,.5);
-
-				@media (max-width: 500px) {
-					padding: 0;
-				}
-
-				a {
-					color: rgba(0,0,0,.5);
-					text-decoration: underline;
-				}
 			}
 		}
 
-	} // header-form
-}
+		button {
+			width: 100%;
+			margin-bottom: 16px;
+		}
+
+		&__agreement {
+			padding-right: 40px;
+			font-size: 14px;
+			color: rgba(0,0,0,.5);
+
+			@media (max-width: 500px) {
+				padding: 0;
+			}
+
+			a {
+				color: rgba(0,0,0,.5);
+				text-decoration: underline;
+			}
+		}
+
+	} // help-choosing
+
+	.header-filter {
+		width: 100%;
+		padding: 45px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		position: relative;
+		bottom: -140px;
+		background: #121212;
+
+		@media (max-width: 1250px) {
+			bottom: 570px;
+		}
+
+		@media (max-width: 990px) {
+			padding: 30px;
+			align-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			bottom: 600px;
+		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 50px;
+			bottom: 550px;
+		}
+
+		@media (max-width: 576px) {
+			padding: var(--index);
+		}
+
+		&__item,
+		&__button {
+			flex: 1;
+			height: 55px;
+		}
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			border: 1px solid rgba(255,255,255,.3);
+			transition: .2s;
+
+			&:hover {
+				cursor: pointer;
+				border-color: var(--color-second-active);
+			}
+
+			@media (max-width: 768px) {
+				flex-basis: 48%;
+			}
+		}
+
+		&__button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+
+			@media (max-width: 990px) {
+				width: 100%;
+				flex-basis: 100%;
+			}
+		}
+	}
+
+} // header
