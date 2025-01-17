@@ -45,7 +45,7 @@ body.lock {
 .container {
 	width: 100%;
 	max-width: calc( 1260px + (var(--index) * 2) );
-	padding: 0 var(--index);
+	padding: 0 20px;
 	margin: 0 auto;
 
 	@media (min-width: 1921px) {
@@ -99,6 +99,6 @@ img {
 @import 'scrollbar';
 
 @import 'burger';
-@import 'header';
+@import 'header/header';
 
 @import 'footer';

@@ -1,0 +1,152 @@
+
+$headerForm_width: 480px;
+$headerForm_height: 560px;
+
+.header-form {
+
+	position: relative;
+	width: 480px;
+	flex-basis: 480px;
+	margin-top: 110px;
+
+	height: 560px;
+	background: #fff;
+
+	@media (max-width: 1250px) {
+		// position: absolute;
+		// bottom: -650px;
+		margin-top: 80px;
+		left: calc(50% - ($headerForm_width / 2));
+		order: 1;
+	}
+
+	@media (max-width: 990px) {
+		margin-top: 0;
+	}
+
+	@media (max-width: 576px) {
+		width: 100%;
+		flex-basis: 100%;
+		height: auto;
+		position: relative;
+		bottom: 0;
+		left: auto;
+		margin-bottom: 20px;
+	}
+
+//
+
+	&-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 45px;
+		background: #fff;
+		z-index: 1;
+
+		@media (max-width: 1250px) {
+			margin: 0 auto;
+		}
+
+		@media (max-width: 576px) {
+			padding: 20px;
+		}
+	} 
+
+//
+
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		@media (max-width: 576px) {
+			font-size: 17px;
+			margin-bottom: 7px;
+		}
+	}
+
+//
+
+	&__text {
+		font-size: 16px;
+		line-height: 140%;
+		margin-bottom: 27px;
+		color: rgba(0,0,0,.7);
+	
+		@media (max-width: 576px) {
+			font-size: 12px;
+			margin-bottom: 20px;
+		}
+	}
+
+} // header-form
+
+.help-choosing {
+
+	input {
+		height: 60px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 576px) {
+			height: 44px;
+		}
+	}
+
+	textarea {
+		height: 80px;
+		resize: none;
+
+		@media (max-width: 576px) {
+			height: 56px;
+		}
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		padding: 20px;
+		font-size: 16px;
+		font-family: 'Raleway';
+		border: 1px solid #e2e2e2;
+		margin-bottom: 13px;
+
+		@media (max-width: 576px) {
+			font-size: 12px;
+			padding: 15px;
+		}
+
+		&::placeholder {
+			color: rgba(0,0,0,.5);
+		}
+	}
+
+	button {
+		width: 100%;
+		margin-bottom: 16px;
+
+		@media (max-width: 576px) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__agreement {
+
+		padding-right: 40px;
+		font-size: 14px;
+		color: rgba(0,0,0,.5);
+
+		@media (max-width: 576px) {
+			padding: 0;
+			font-size: 12px;
+		}
+
+		a {
+			color: rgba(0,0,0,.5);
+			text-decoration: underline;
+		}
+	}
+
+} // help-choosing

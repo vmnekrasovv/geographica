@@ -1,0 +1,61 @@
+
+$header_height: 950px;
+$navbar_height: 100px;
+$navbar_height_mobile: 70px;
+
+.header {
+	
+	height: $header_height;
+	background: url('../images/dest/header.jpg') no-repeat;
+
+	@media (max-width: 990px) {
+		height: auto;
+		background: url('../images/dest/header_mobile_2x.jpg') no-repeat;
+		background-size: cover;
+	}
+
+
+	& > .container {
+		height: calc($header_height - $navbar_height);
+		position: relative; 
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@media (max-width: 1250px) {
+			gap: 30px;
+		}
+
+		@media (max-width: 990px) {
+			gap: 70px;
+			height: auto;
+		}
+	}
+
+	.filter-button {
+		width: 92px;
+		height: 40px;
+		border: 1px solid rgba(255,255,255,.3);
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 700;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			border-color: var(--color-second);
+		}
+	}
+
+	@import 'navbar';
+	@import 'logo';
+	@import 'header_menu';
+	@import 'toolbar';
+
+	@import 'header_content';
+	@import 'header_form';
+	@import 'header_filter';
+
+} // header

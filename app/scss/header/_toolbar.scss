@@ -1,0 +1,70 @@
+.toolbar {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	@media (max-width: 1400px) {
+		justify-content: center;
+	}
+
+	@media (max-width: 990px) {
+		gap: 15px;
+	}
+
+	.buttons {
+		display: flex;
+		gap: 15px;
+	}
+} // toolbar
+
+.search, .message {
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(255,255,255,.25);
+	border-radius: 100%;
+	transition: .2s;
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--color-second);
+	}
+
+	@media (max-width: 767px) {
+		border: none;
+	}
+}
+
+.search {
+	background: url('../images/dest/icons/search.svg') center no-repeat;
+
+	@media (max-width: 767px) {
+		width: auto;
+		flex: 1;
+		max-width: 250px;
+		height: 40px;
+		border: 1px solid rgba(255,255,255,.3);
+		border-radius: 0;
+		background-position: calc(100% - 12px) center;
+	}
+}
+
+.message {
+	background: url('../images/dest/icons/whatsapp.svg') center no-repeat;
+
+	@media (max-width: 767px) {
+		width: 23px;
+		height: 24px;
+		background-size: 100%;
+	}
+}
+
+.phone {
+	font-size: 16px;
+	font-weight: 600;
+	font-family: 'Arial';
+	text-shadow: 1px 1px #1c1c1c;
+
+	@media (max-width: 576px) {
+		font-size: 14px;
+	}
+}
